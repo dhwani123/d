@@ -1,0 +1,24 @@
+<h1><i><u>REGISTRATION FORM FOR STUDENT</u></i></h1>
+<%= form_for (@rstud) do |f| %>
+<%= f.label:firstname %><%= f.text_field :firstname %>
+<%= f.label :middlename %><%= f.text_field :middlename %>
+<%= f.label :lastname %><%= f.text_field :lastname %>
+<div>
+	<h4>
+<%= f.label :Address %>
+</div>
+<%= f.text_area :address,:size=>'40', :rows=>'40'%>
+<div>
+<%= f.label :DateOfBirth %>
+<%= f.date_select :dob, :start_year => Time.now.year - 40, :end_year => Time.now.year + 10 %>
+</div>
+<%= f.label:fathername %>
+<%= f.text_field :fathername %>
+<%= f.label:mothername %>
+<%= f.text_field :mothername %>
+<%= f.label:f_qualification %>
+<%= f.text_field :f_qaulification %>
+<div class= "action">
+	<%= f.submit "Register" %>
+</div>
+<% end %>

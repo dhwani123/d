@@ -1,0 +1,24 @@
+<h1><i><u>REGISTRATION FORM FOR TEACHERS</u></i></h1>
+<%= form_for(@rteach) do |f| %>
+<%= f.label:firstname %><%= f.text_field :firstname %>
+<%= f.label :middlename %><%= f.text_field :middlename %>
+<%= f.label :lastname %><%= f.text_field :lastname %>
+<div>
+	<h4>
+<%= f.label :Address %>
+</div>
+<%= f.text_area :address,:size => '40', :rows => '40'%>
+<div>
+<%= f.label :DateOfBirth %>
+<%= f.date_select :dob, :start_year => Time.now.year - 70, :end_year => Time.now.year + 10 %>
+</div>
+<%= f.label:f_qualification %>
+<%= f.text_field :f_qaulification %>
+<%= f.label:f_experience%>
+<%= f.text_field :f_experience %>
+<%= f.label:f_specification%>
+<%= f.text_field :f_specification %>
+<div class= "action">
+	<%= f.submit "Register" %>
+</div>
+<% end %>
