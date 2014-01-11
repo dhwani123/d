@@ -5,6 +5,8 @@ D::Application.routes.draw do
 
 
 
+  resources :ps
+
   devise_for :sts
 
   get "rteach/new"
